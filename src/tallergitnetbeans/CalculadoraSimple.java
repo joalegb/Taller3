@@ -5,7 +5,6 @@
  */
 package tallergitnetbeans;
 
-
 public class CalculadoraSimple extends javax.swing.JFrame {
 
     /**
@@ -131,7 +130,13 @@ public class CalculadoraSimple extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sumaActionPerformed
-        // TODO add your handling code here:
+        try {
+            float resultadoSuma = Float.parseFloat(this.txt_valor1.getText()) + Float.parseFloat(this.txt_valor2.getText());
+            this.txt_resultado.setText(Float.toString(resultadoSuma));
+
+        } catch (Exception e) {
+            this.txt_resultado.setText("Error");
+        }
     }//GEN-LAST:event_btn_sumaActionPerformed
 
     private void btn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_restaActionPerformed
