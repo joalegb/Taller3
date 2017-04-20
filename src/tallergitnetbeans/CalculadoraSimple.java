@@ -135,6 +135,14 @@ public class CalculadoraSimple extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sumaActionPerformed
 
     private void btn_restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_restaActionPerformed
+        try {
+            float resultadoResta = Float.parseFloat(this.txt_valor1.getText()) - Float.parseFloat(this.txt_valor2.getText());
+            this.txt_resultado.setText(Float.toString(resultadoResta));
+        }
+        catch(NumberFormatException e) {
+            this.txt_resultado.setText("error");
+        }
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_restaActionPerformed
 
@@ -153,7 +161,7 @@ public class CalculadoraSimple extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
